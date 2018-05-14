@@ -1,0 +1,109 @@
+./subj_set_up 
+
+sed -i -e 's/Subj1/Subj2/g' subj_set_up
+sed -i -e 's/sub001/sub003/g' subj_set_up
+sed -i -e 's/sub001/sub003/g' run_set_up
+sed -i -e 's/sub001/sub003/g' design_matrix_generator
+sed -i -e 's/Subj1/Subj2/g' design_matrix_generator
+sed -i -e 's/Subj1/Subj2/g' onsets_to_spm.m
+./subj_set_up
+
+sed -i -e 's/Subj2/Subj3/g' subj_set_up
+sed -i -e 's/sub003/sub004/g' subj_set_up
+sed -i -e 's/sub003/sub004/g' run_set_up
+sed -i -e 's/sub003/sub004/g' design_matrix_generator
+sed -i -e 's/Subj2/Subj3/g' design_matrix_generator
+sed -i -e 's/Subj2/Subj3/g' onsets_to_spm.m
+./subj_set_up
+
+sed -i -e 's/Subj3/Subj4/g' subj_set_up
+sed -i -e 's/sub004/sub006/g' subj_set_up
+sed -i -e 's/sub004/sub006/g' run_set_up
+sed -i -e 's/sub004/sub006/g' design_matrix_generator
+sed -i -e 's/Subj3/Subj4/g' design_matrix_generator
+sed -i -e 's/Subj3/Subj4/g' onsets_to_spm.m
+./subj_set_up
+
+sed -i -e 's/Subj4/Subj5/g' subj_set_up
+sed -i -e 's/sub006/sub007/g' subj_set_up
+sed -i -e 's/sub006/sub007/g' run_set_up
+sed -i -e 's/sub006/sub007/g' design_matrix_generator
+sed -i -e 's/Subj4/Subj5/g' design_matrix_generator
+sed -i -e 's/Subj4/Subj5/g' onsets_to_spm.m
+./subj_set_up
+
+sed -i -e 's/Subj5/Subj6/g' subj_set_up
+sed -i -e 's/sub007/sub009/g' subj_set_up
+sed -i -e 's/sub007/sub009/g' run_set_up
+sed -i -e 's/sub007/sub009/g' design_matrix_generator
+sed -i -e 's/Subj5/Subj6/g' design_matrix_generator
+sed -i -e 's/Subj5/Subj6/g' onsets_to_spm.m
+./subj_set_up
+
+
+### The script subj_set_up does what its name imply, and requires a few other scripts to work : run_set_up, ..
+sed -i -e 's/Subj6/Subj7/g' subj_set_up
+sed -i -e 's/sub009/sub012/g' subj_set_up
+sed -i -e 's/sub009/sub012/g' run_set_up
+sed -i -e 's/sub009/sub0012/g' design_matrix_generator
+sed -i -e 's/Subj6/Subj7/g' design_matrix_generator
+sed -i -e 's/Subj6/Subj7/g' onsets_to_spm.m
+./subj_set_up
+
+sed -i -e 's/Subj7/Subj8/g' subj_set_up
+sed -i -e 's/sub012/sub014/g' subj_set_up
+sed -i -e 's/sub012/sub014/g' run_set_up
+sed -i -e 's/sub012/sub014/g' design_matrix_generator
+sed -i -e 's/Subj7/Subj8/g' design_matrix_generator
+sed -i -e 's/Subj7/Subj8/g' onsets_to_spm.msed -i -e "s/path_to_be_replaced/$path_to_Subji/g" exemple_glmdenoise_code.m
+./subj_set_up
+
+sed -i -e 's/Subj8/Subj9/g' subj_set_up
+sed -i -e 's/sub014/sub015/g' subj_set_up
+sed -i -e 's/sub014/sub015/g' run_set_up
+sed -i -e 's/sub014/sub015/g' design_matrix_generator
+sed -i -e 's/Subj8/Subj9/g' design_matrix_generator
+sed -i -e 's/Subj8/Subj9/g' onsets_to_spm.m
+./subj_set_up
+
+sed -i -e 's/Subj9/Subj10/g' subj_set_up
+sed -i -e 's/sub015/sub016/g' subj_set_up
+sed -i -e 's/sub015/sub016/g' run_set_up
+sed -i -e 's/sub015/sub016/g' design_matrix_generator
+sed -i -e 's/Subj9/Subj10/g' design_matrix_generator
+sed -i -e 's/Subj9/Subj10/g' onsets_to_spm.m
+./subj_set_up
+
+sed -i -e 's/Subj10/Subj11/g' subj_set_up
+sed -i -e 's/sub016/sub017/g' subj_set_up
+sed -i -e 's/sub016/sub017/g' run_set_up
+sed -i -e 's/sub016/sub017/g' design_matrix_generator
+sed -i -e 's/Subj10/Subj11/g' design_matrix_generator
+sed -i -e 's/Subj10/Subj11/g' onsets_to_spm.m
+./subj_set_up
+
+sed -i -e 's/Subj11/Subj12/g' subj_set_up
+sed -i -e 's/sub017/sub018/g' subj_set_up
+sed -i -e 's/sub017/sub018/g' run_set_up
+sed -i -e 's/sub017/sub018/g' design_matrix_generator
+sed -i -e 's/Subj11/Subj12/g' design_matrix_generator
+sed -i -e 's/Subj11/Subj12/g' onsets_to_spm.m
+./subj_set_up
+
+sed -i -e 's/Subj12/Subj1/g' subj_set_up
+sed -i -e 's/sub018/sub001/g' subj_set_up
+sed -i -e 's/sub018/sub001/g' run_set_up
+sed -i -e 's/sub018/sub001/g' design_matrix_generator
+sed -i -e 's/Subj12/Subj1/g' design_matrix_generator
+sed -i -e 's/Subj12/Subj1/g' onsets_to_spm.m
+
+./preprocessing
+
+path_to_position=$(readlink -f .)
+path_to_position=$(echo $path_to_position | sed 's_/_\\/_g')
+sed -i -e "s/path/$path_to_position/g" Mean_Anat.m
+
+
+
+
+

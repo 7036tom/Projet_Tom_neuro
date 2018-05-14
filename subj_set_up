@@ -1,0 +1,64 @@
+mkdir Subj1
+cd Subj1
+
+### Setting up Anat folder ###
+mkdir Anat
+cd Anat
+wget http://psydata.ovgu.de/studyforrest/phase1/sub001/anatomy/highres001.nii.gz
+gunzip highres001.nii.gz
+cd ../
+
+mkdir Beta
+mkdir ts_glm_denoise
+mkdir output_glm_denoise
+
+### Here we produce the design matrices used by spm glm and the log_Subji_runi_onsets requiered by glm denoise ###
+cp ../design_definition.m .
+cp ../design_matrix_generator .
+cp ../onsets_to_spm.m .
+ 
+./design_matrix_generator
+rm design_definition.m
+rm design_matrix_generator
+
+# Here we adapt the glmdenoise script to each subject.
+cd ..
+cp example_glmdenoise_code.m Subj1/
+path_to_Subji=$(readlink -f Subj1)
+path_to_Subji=$(echo $path_to_Subji | sed 's_/_\\/_g')
+cd Subj1
+sed -i -e "s/path_to_be_replaced/$path_to_Subji/g" exemple_glmdenoise_code.m
+
+### Here we set up the runs using the run_set_up script ###
+
+sed -i -e 's/run1/run2/g' ../run_set_up
+sed -i -e 's/run001/run002/g' ../run_set_up
+../run_set_up
+
+sed -i -e 's/run2/run3/g' ../run_set_up
+sed -i -e 's/run002/run003/g' ../run_set_up
+../run_set_up
+
+sed -i -e 's/run3/run4/g' ../run_set_up
+sed -i -e 's/run003/run004/g' ../run_set_up
+../run_set_up
+
+sed -i -e 's/run4/run5/g' ../run_set_up
+sed -i -e 's/run004/run005/g' ../run_set_up
+../run_set_up
+
+sed -i -e 's/run5/run6/g' ../run_set_up
+sed -i -e 's/run005/run006/g' ../run_set_up
+../run_set_up
+
+sed -i -e 's/run6/run7/g' ../run_set_up
+sed -i -e 's/run006/run007/g' ../run_set_up
+../run_set_up
+
+sed -i -e 's/run7/run8/g' ../run_set_up
+sed -i -e 's/run007/run008/g' ../run_set_up
+../run_set_up
+
+sed -i -e 's/run8/run1/g' ../run_set_up
+sed -i -e 's/run008/run001/g' ../run_set_up
+

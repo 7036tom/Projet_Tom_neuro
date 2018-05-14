@@ -1,0 +1,37 @@
+mkdir Behav
+cd Behav
+
+### Download the behadvdata.txt ###
+wget http://psydata.ovgu.de/studyforrest/phase1/sub001/behav/task002_run001/behavdata.txt
+mv behavdata.txt behavdata.txt.0
+wget http://psydata.ovgu.de/studyforrest/phase1/sub001/behav/task002_run002/behavdata.txt
+mv behavdata.txt behavdata.txt.1
+wget http://psydata.ovgu.de/studyforrest/phase1/sub001/behav/task002_run003/behavdata.txt
+mv behavdata.txt behavdata.txt.2
+wget http://psydata.ovgu.de/studyforrest/phase1/sub001/behav/task002_run004/behavdata.txt
+mv behavdata.txt behavdata.txt.3
+wget http://psydata.ovgu.de/studyforrest/phase1/sub001/behav/task002_run005/behavdata.txt
+mv behavdata.txt behavdata.txt.4
+wget http://psydata.ovgu.de/studyforrest/phase1/sub001/behav/task002_run006/behavdata.txt
+mv behavdata.txt behavdata.txt.5
+wget http://psydata.ovgu.de/studyforrest/phase1/sub001/behav/task002_run007/behavdata.txt
+mv behavdata.txt behavdata.txt.6
+wget http://psydata.ovgu.de/studyforrest/phase1/sub001/behav/task002_run008/behavdata.txt
+mv behavdata.txt behavdata.txt.7
+
+### Use the design_definition script to produce the design matrices ###
+cd ../
+path_to_design_definition=$(readlink -f design_definition.m)
+matlab -nodisplay -nosplash -nodesktop -r "run('$path_to_design_definition');exit;"
+
+### Use the design matrices and the onsets_to_spm script to produce the log_Subji_runi_onsets needed by glm denoise ###
+
+path_to_onsets_to_spm=$(readlink -f onsets_to_spm.m)
+matlab -nodisplay -nosplash -nodesktop -r "run('$path_to_onsets_to_spm');exit;"
+
+
+
+
+
+
+

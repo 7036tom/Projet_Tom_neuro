@@ -1,0 +1,71 @@
+Working_path=$(readlink -f Subj1)
+Working_path_noslash=$(echo $Working_path | sed 's_/_\\/_g')
+
+sed -i -e "s/\/path/$Working_path_noslash/g" preprocessing.m
+sed -i -e "s/\/path/$Working_path_noslash/g" spm_glm.m
+
+cp preprocessing.m Subj1
+sed -i -e 's/Subj1/Subj2/g' preprocessing.m
+cp spm_glm.m Subj1
+sed -i -e 's/Subj1/Subj2/g' spm_glm.m
+
+cp preprocessing.m Subj2
+sed -i -e 's/Subj2/Subj3/g' preprocessing.m
+cp spm_glm.m Subj2
+sed -i -e 's/Subj2/Subj3/g' spm_glm.m
+
+cp preprocessing.m Subj3
+sed -i -e 's/Subj3/Subj4/g' preprocessing.m
+cp spm_glm.m Subj3
+sed -i -e 's/Subj3/Subj4/g' spm_glm.m
+
+cp preprocessing.m Subj4
+sed -i -e 's/Subj4/Subj5/g' preprocessing.m
+cp spm_glm.m Subj4
+sed -i -e 's/Subj4/Subj5/g' spm_glm.m
+
+cp preprocessing.m Subj5
+sed -i -e 's/Subj5/Subj6/g' preprocessing.m
+cp spm_glm.m Subj5
+sed -i -e 's/Subj5/Subj6/g' spm_glm.m
+
+cp preprocessing.m Subj6
+sed -i -e 's/Subj6/Subj7/g' preprocessing.m
+cp spm_glm.m Subj6
+sed -i -e 's/Subj6/Subj7/g' spm_glm.m
+
+cp preprocessing.m Subj7
+sed -i -e 's/Subj7/Subj8/g' preprocessing.m
+cp spm_glm.m Subj7
+sed -i -e 's/Subj7/Subj8/g' spm_glm.m
+
+cp preprocessing.m Subj8
+sed -i -e 's/Subj8/Subj9/g' preprocessing.m
+cp spm_glm.m Subj8
+sed -i -e 's/Subj8/Subj9/g' spm_glm.m
+
+cp preprocessing.m Subj9
+sed -i -e 's/Subj9/Subj10/g' preprocessing.m
+cp spm_glm.m Subj9
+sed -i -e 's/Subj9/Subj10/g' spm_glm.m
+
+cp preprocessing.m Subj10
+sed -i -e 's/Subj10/Subj11/g' preprocessing.m
+cp spm_glm.m Subj10
+sed -i -e 's/Subj10/Subj11/g' spm_glm.m
+
+cp preprocessing.m Subj11
+sed -i -e 's/Subj11/Subj12/g' preprocessing.m
+cp spm_glm.m Subj11
+sed -i -e 's/Subj11/Subj12/g' spm_glm.m
+
+cp preprocessing.m Subj12
+sed -i -e 's/Subj12/Subj1/g' preprocessing.m
+cp spm_glm.m Subj12
+sed -i -e 's/Subj12/Subj1/g' spm_glm.m
+
+sed -i -e "s/$Working_path_noslash/\/path/g" preprocessing.m
+sed -i -e "s/$Working_path_noslash/\/path/g" spm_glm.m
+
+
+
