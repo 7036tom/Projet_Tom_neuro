@@ -30,6 +30,7 @@ cd Subj1
 sed -i -e "s/path_to_be_replaced/$path_to_Subji/g" exemple_glmdenoise_code.m
 
 ### Here we set up the runs using the run_set_up script ###
+../run_set_up
 
 sed -i -e 's/run1/run2/g' ../run_set_up
 sed -i -e 's/run001/run002/g' ../run_set_up
