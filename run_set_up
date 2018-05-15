@@ -1,6 +1,6 @@
 mkdir run1
 cd run1
-wget http://psydata.ovgu.de/studyforrest/phase1/sub001/BOLD/task002_run005/bold_dico_bold7Tp1_to_subjbold7Tp1.nii.gz ### Downloading the data ###
+wget http://psydata.ovgu.de/studyforrest/phase1/sub001/BOLD/task002_run001/bold_dico_bold7Tp1_to_subjbold7Tp1.nii.gz ### Downloading the data ###
 gunzip bold_dico_bold7Tp1_to_subjbold7Tp1.nii.gz ### unziping it###
 fsl5.0-fslsplit bold_dico_bold7Tp1_to_subjbold7Tp1.nii.gz ### spliting it ###
 gunzip *.gz ### unziping the result ###

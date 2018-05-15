@@ -55,7 +55,6 @@ sed -i -e 's/sub012/sub014/g' subj_set_up
 sed -i -e 's/sub012/sub014/g' run_set_up
 sed -i -e 's/sub012/sub014/g' design_matrix_generator
 sed -i -e 's/Subj7/Subj8/g' design_matrix_generator
-sed -i -e 's/Subj7/Subj8/g' onsets_to_spm.msed -i -e "s/path_to_be_replaced/$path_to_Subji/g" exemple_glmdenoise_code.m
 ./subj_set_up
 
 sed -i -e 's/Subj8/Subj9/g' subj_set_up
