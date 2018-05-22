@@ -45,7 +45,7 @@ sed -i -e 's/Subj5/Subj6/g' onsets_to_spm.m
 sed -i -e 's/Subj6/Subj7/g' subj_set_up
 sed -i -e 's/sub009/sub012/g' subj_set_up
 sed -i -e 's/sub009/sub012/g' run_set_up
-sed -i -e 's/sub009/sub0012/g' design_matrix_generator
+sed -i -e 's/sub009/sub012/g' design_matrix_generator
 sed -i -e 's/Subj6/Subj7/g' design_matrix_generator
 sed -i -e 's/Subj6/Subj7/g' onsets_to_spm.m
 ./subj_set_up
@@ -55,6 +55,7 @@ sed -i -e 's/sub012/sub014/g' subj_set_up
 sed -i -e 's/sub012/sub014/g' run_set_up
 sed -i -e 's/sub012/sub014/g' design_matrix_generator
 sed -i -e 's/Subj7/Subj8/g' design_matrix_generator
+sed -i -e 's/Subj7/Subj8/g' onsets_to_spm.m
 ./subj_set_up
 
 sed -i -e 's/Subj8/Subj9/g' subj_set_up
